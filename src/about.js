@@ -3,15 +3,12 @@ import { Text, View, TouchableOpacity } from "react-native"
 import styled from "styled-components/native"
 import { Paragraph, TitleText, HeaderText } from "./typography"
 
-// how many years and months has it been since august 2017 using Date.now()?
-// https://stackoverflow.com/questions/2627473/how-to-calculate-the-number-of-days-between-two-dates
-// https://stackoverflow.com/questions/2627473/how-to-calculate-the-number-of-days-between-two-dates/2627491#2627491
 
 const oneYear = 24 * 60 * 60 * 1000 * 365 // hours*minutes*seconds*milliseconds
 const startedCodingForReal = new Date(2017, 8, 12)
 const firstViralTweet = new Date(2013, 12, 12)
 const firstViralVideo = new Date(2013, 5, 12)
-const init = new Date(1997, 11, 12)
+const init = new Date(1997, 11, 14)
 const today = new Date(Date.now())
 
 const years = Math.round(Math.abs((init - today) / oneYear))

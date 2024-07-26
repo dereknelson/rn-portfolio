@@ -11,7 +11,7 @@ const firstViralVideo = new Date(2013, 5, 12)
 const init = new Date(1997, 11, 14)
 const today = new Date(Date.now())
 
-const years = Math.round(Math.abs((init - today) / oneYear))
+const years = Math.round(Math.abs((init - today) / oneYear) - 1)
 const codeDiff = Math.round(Math.abs((startedCodingForReal - today) / oneYear))
 const lifePercent =
 	(Math.round(Math.abs((startedCodingForReal - today) / oneYear)) / years) *
@@ -21,10 +21,10 @@ const l = Math.round(Math.abs((firstViralTweet - today) / oneYear))
 export const About = ({}) => {
 	return (
 		<AboutContainer>
-			<TitleText>
-				serial entrepreneur, app developer, terminally online ex-meme lord
-			</TitleText>
 			<TitleText>hi! i'm derek nelson.</TitleText>
+			<Paragraph>
+				serial entrepreneur, app developer, terminally online ex-meme lord
+			</Paragraph>
 			<HeaderText>there's a lot in a name. here are two i go by: derek.eth for anything software | prodigynelson for anything content</HeaderText>
 			<Paragraph>
 				for my technical resume/cv, check out https://read.cv/derek.eth
@@ -47,6 +47,8 @@ export const About = ({}) => {
 const AboutContainer = styled(View)`
 	flex: 1;
 	margin-horizontal: 20px;
+	justify-content: center;
+	align-items: center;
 `
 
 const AboutColumns = styled(View)`
